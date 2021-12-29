@@ -1,0 +1,34 @@
+.footer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #11114b;
+    height: 120px;
+}
+.ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+.item{
+
+    font-size: 35px;
+    color: white;
+}
+
+.item:hover{
+
+    color: #c1c1c1;
+}
+
+p{
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+}
