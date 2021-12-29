@@ -9,7 +9,7 @@ function Home(){
         <div className={styles.container}>
             <h1>Bem-Vindo ao <span>MyClients</span></h1>
             <span>Gerencie a dívida de seus clientes agora mesmo!</span>
-            <LinkButton to="/newclient" text="Começar Agora!"/>
+            <LinkButton to="/newclient" text="Adicionar Cliente"/>
         </div> 
     )
 }

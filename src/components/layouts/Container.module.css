@@ -6,5 +6,6 @@
     margin: 0 auto;
     flex-wrap: wrap;
     flex-direction: column;
-    min-height: 80%;
+    min-height: 85%;
+    align-items: center;
 }

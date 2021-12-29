@@ -10,7 +10,7 @@ import Header from './components/layouts/Header'
 
 function App() {
   return (
-    <Router>
+  <Router>
     <Header />
 
     <Container>
