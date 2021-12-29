@@ -1,0 +1,31 @@
+.container{
+
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > h1{
+
+    color: #222;
+}
+
+.container > h1 > span{
+
+    padding: 2px 5px;
+    color: white;
+    background-color: #147593;
+    border-radius: 10px;
+    font-weight: lighter;
+}
+
+.container > span{
+
+    color: #c1c1c1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+}
