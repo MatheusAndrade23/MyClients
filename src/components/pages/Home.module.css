@@ -29,3 +29,11 @@
     font-size: 18px;
     font-weight: lighter;
 }
+
+.logo{
+
+    font-size: 150px;
+    font-family: 'Shizuru', cursive;
+    margin-top: 25px;
+    color: #147593;
+}

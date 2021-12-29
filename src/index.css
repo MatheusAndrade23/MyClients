@@ -5,6 +5,7 @@
     outline: none;
     text-decoration: none;
     list-style: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html,body,#root{
