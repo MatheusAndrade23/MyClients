@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './components/pages/Home';
 import NewClient from './components/pages/NewClient';
 import Clients from './components/pages/Clients'
+import PageNotFound from './components/pages/PageNotFound'
 
 import Container from './components/layouts/Container';
 import Footer from './components/layouts/Footer'
@@ -10,21 +11,22 @@ import Header from './components/layouts/Header'
 
 function App() {
   return (
-  <Router>
-    <Header />
+    <Router>
+      <Header />
 
-    <Container>
+      <Container>
 
-      <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/newclient' element={<NewClient/>}/>
-        <Route exact path='/clients' element={<Clients/>}/>
-      </Routes>
+        <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route exact path='/newclient' element={<NewClient/>}/>
+          <Route exact path='/clients' element={<Clients/>}/>
+          <Route path ='*' element={<PageNotFound/>}/>
+        </Routes>
 
-    </Container>
+      </Container>
 
-    <Footer />
-  </Router>
+      <Footer />
+    </Router>
   )
 }
 

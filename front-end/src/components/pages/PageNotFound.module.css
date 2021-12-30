@@ -1,0 +1,29 @@
+.container{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > h1{
+
+    color: #147593;
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+.container > p{
+
+    margin-top: 25px;
+    color: #d1d1d1;
+    font-size: 25px;
+}
+
+.container > .logo{
+
+    font-size: 150px;
+    font-family: 'Shizuru', cursive;
+    margin-top: 25px;
+    color: #222;
+    cursor: default;
+}

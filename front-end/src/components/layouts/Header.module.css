@@ -44,7 +44,7 @@
 	bottom: 0%; left: 50%;
 	border-radius: 10px;
 	transition: all 150ms ease;
-    background-color: white;
+    background-color: #11114b;
 }
 
 .item:hover::after{
