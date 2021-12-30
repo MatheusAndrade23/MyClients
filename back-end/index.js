@@ -1,13 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const body = require('body-parser');
 
 const Clients = require('./clients.js');
 
+const router = express.Router();
 dotenv.config();
 const app = express();
 
 app.listen(process.env.PORT || 5000)
+
+app.use(body.json());
+app.use(body.urlencoded({extended: false}))
+
 
 mongoose.connect(process.env.DB_CONFIG, {
     useNewUrlParser: true,
@@ -23,8 +29,13 @@ mongoose.connect(process.env.DB_CONFIG, {
 
 app.get('/clients', (req, res) => {
 
-    Clients.find({}).exec( (err, clients) => {
+    Clients.find({}).exec((err, clients) => {
 
         res.json(clients);
     })
+});
+
+router.post('/receive', async (req,res) => {
+
+    
 });
