@@ -9,6 +9,7 @@ function Client(){
 
     let { id } = useParams()
     const [Client, setClient] = useState([])
+    const [InitialClient, setInitialClient] = useState ([])
 
     useEffect(() => {
 
@@ -23,23 +24,43 @@ function Client(){
             data.map((value, index) => {
                 if(id === value._id){
                     setClient(data[index])
+                    setInitialClient(data[index]) 
                 }
             })
         })
     }, [id])
 
-    function handleFinalizarClick(){
-        
+    function handleChange(e) {
+        setClient({ ...Client, [e.target.name]: e.target.value })
+      }
+
+    const handleFinalizarClick = (e) => {
+
+        e.preventDefault()
+
+        if(InitialClient !== Client){
+            
+            fetch('http://localhost:5000/clients', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(Client),
+            })
+            .then((resp) => resp.json())
+            .then((data) => {   
+            })
+        }
     }
 
     return(
 
-        <div className={styles.container}>
+        <form className={styles.container}>
             <h1>Dados do Cliente</h1>
-            <Input type="text" placeholder={Client.name} text="Nome"/>
-            <Input type="text" placeholder={Client.total} text="Conta"/>
-            <Link to="/clients" className={styles.btn} onClick={handleFinalizarClick}>Finalizar</Link>
-        </div>
+            <Input type="text" placeholder={Client.name} text="Nome"  handleOnChange={handleChange} name="name"/>
+            <Input type="text" placeholder={Client.total} text="Conta"  handleOnChange={handleChange}  name="total"/>
+            <button type="submit" className={styles.btn} onClick={handleFinalizarClick}>Finalizar</button>
+        </form>
     )
 }
 
