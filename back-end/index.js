@@ -7,10 +7,9 @@ const cors = require("cors");
 const Clients = require('./clients.js');
 
 const router = express.Router();
-dotenv.config();
 const app = express();
 
-app.listen(process.env.PORT || 5000)
+dotenv.config();
 
 app.use(body.json());
 app.use(body.urlencoded({extended: false}))
@@ -47,4 +46,6 @@ router.post('/receive', async (req,res) => {
 
     
 });
+
+app.listen(process.env.PORT || 5000)
 

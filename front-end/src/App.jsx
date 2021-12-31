@@ -8,6 +8,7 @@ import PageNotFound from './components/pages/PageNotFound'
 import Container from './components/layouts/Container';
 import Footer from './components/layouts/Footer'
 import Header from './components/layouts/Header'
+import Client from './components/layouts/Client'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/newclient' element={<NewClient/>}/>
           <Route exact path='/clients' element={<Clients/>}/>
+          <Route path='/client/:id' element={<Client/>}/>
           <Route path ='*' element={<PageNotFound/>}/>
         </Routes>
 
