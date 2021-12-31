@@ -8,7 +8,7 @@ import PageNotFound from './components/pages/PageNotFound'
 import Container from './components/layouts/Container';
 import Footer from './components/layouts/Footer'
 import Header from './components/layouts/Header'
-import Client from './components/layouts/Client'
+import Client from './components/pages/Client'
 
 function App() {
   return (

@@ -6,8 +6,6 @@ var clientSchema = new Schema({
 
     name: String,
     total: Number,
-    contas: Array,
-    datas: Array
 
 },{collection:'clients'});
 
