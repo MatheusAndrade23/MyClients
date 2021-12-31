@@ -1,0 +1,27 @@
+.container{
+
+    width: 250px;
+    height: 170px;
+    border-radius: 10px;
+    border: 1px solid #147593;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.container > p{
+
+    color: #222;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.container > p > span{
+
+    font-weight: lighter;
+    color: #147593;
+}

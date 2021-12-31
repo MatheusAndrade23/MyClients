@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const body = require('body-parser');
+const cors = require("cors");
 
 const Clients = require('./clients.js');
 
@@ -14,6 +15,13 @@ app.listen(process.env.PORT || 5000)
 app.use(body.json());
 app.use(body.urlencoded({extended: false}))
 
+const corsOptions ={
+   origin:'*', 
+   credentials:true,
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
 
 mongoose.connect(process.env.DB_CONFIG, {
     useNewUrlParser: true,
@@ -39,3 +47,4 @@ router.post('/receive', async (req,res) => {
 
     
 });
+
