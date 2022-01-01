@@ -34,7 +34,7 @@ function Clients(){
         ))}
         {!removeLoading && <Loading />}
         {removeLoading && clients.length === 0 && (
-          <p>Não há clientes cadastrados!</p>
+          <p className={styles.p}>Não há clientes cadastrados!</p>
         )}
     </div>
     )
