@@ -28,7 +28,7 @@ function Client(){
 
     function handleChange(e) {
         setClient({ ...Client, [e.target.name]: e.target.value })
-      }
+    }
 
     const handleFinalizarClick = (e) => {
 
