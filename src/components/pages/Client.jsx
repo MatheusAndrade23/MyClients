@@ -1,6 +1,6 @@
 import styles from './Client.module.css'
 
-import { Link, useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import Input from '../forms/Input'
@@ -8,6 +8,8 @@ import Input from '../forms/Input'
 function Client(){
 
     let { id } = useParams()
+    const navigate = useNavigate()
+
     const [Client, setClient] = useState([])
     const [InitialClient, setInitialClient] = useState ([])
 
@@ -40,7 +42,7 @@ function Client(){
 
         if(InitialClient !== Client){
             
-            fetch('http://localhost:5000/clients', {
+            fetch('http://localhost:5000/receive', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -48,7 +50,8 @@ function Client(){
             body: JSON.stringify(Client),
             })
             .then((resp) => resp.json())
-            .then((data) => {   
+            .then((data) => {  
+                navigate('/clients')
             })
         }
     }
