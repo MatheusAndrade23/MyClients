@@ -11,7 +11,6 @@ function Client(){
     const navigate = useNavigate()
 
     const [Client, setClient] = useState([])
-    const [InitialClient, setInitialClient] = useState ([])
 
     useEffect(() => {
 
@@ -23,12 +22,7 @@ function Client(){
         })
         .then((resp) => resp.json())
         .then((data) => {
-            data.map((value, index) => {
-                if(id === value._id){
-                    setClient(data[index])
-                    setInitialClient(data[index]) 
-                }
-            })
+            
         })
     }, [id])
 
@@ -39,21 +33,6 @@ function Client(){
     const handleFinalizarClick = (e) => {
 
         e.preventDefault()
-
-        if(InitialClient !== Client){
-            
-            fetch('http://localhost:5000/receive', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(Client),
-            })
-            .then((resp) => resp.json())
-            .then((data) => {  
-                navigate('/clients')
-            })
-        }
     }
 
     return(

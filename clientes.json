@@ -1,0 +1,15 @@
+{
+    "clients": [
+        {
+            "name": "João",
+            "total": 5000,
+            "_id": 1
+        },
+        {
+            "name": "Pedro",
+            "total": 5000,
+            "_id": 2
+        }
+    ]
+    
+}
