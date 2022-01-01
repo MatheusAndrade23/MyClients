@@ -1,2 +1,5 @@
 # MyClients
-Gerenciador de clientes com dívidas para um estabelecimento comercial. Desenvolvido com ReactJS, NodeJS e outras tecnologias. 
+
+<div align="center">
+  <img src="/src/img/logo.jpeg"/>
+</div>
