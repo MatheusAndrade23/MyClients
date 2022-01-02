@@ -19,10 +19,11 @@ function NewClient(){
 
         e.preventDefault()
 
-        if(Client.name && !Client.total){
+        if(Client.name){
 
-            Client.total = 0;
-            Client._id = v4()
+            Client.total = (!Client.total && 0)
+
+            Client.id = v4()
 
             fetch('http://localhost:5000/clients', {
             method: 'POST',
