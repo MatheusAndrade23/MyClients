@@ -6,9 +6,12 @@ function Client({nome, total, id}){
 
     return(
         <div className={styles.container}>
-            <p>Nome: <span>{nome}</span></p>
+            <span className={styles.title}>{nome}</span>
             <p>Conta: <span>{total} R$</span></p>
-            <LinkButton to={`/client/${id}`} text="Acessar"/>
+            <div className={styles.buttons}>
+                <LinkButton to={`/client/${id}`} text="Editar"/>
+                <LinkButton to={`/clients`} text="Excluir"/>
+            </div>
         </div>
     )
 }
