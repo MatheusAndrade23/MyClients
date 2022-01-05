@@ -27,5 +27,5 @@
  <br></br>
  
 <div align="center">
-  <p>---- Em Construção ----</p>
+  <p>---- Em Desenvolvimento ----</p>
 </div>
