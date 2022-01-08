@@ -6,6 +6,8 @@
 
 ### Gerenciador de clientes com dívidas para um estabelecimento comercial, que foi desenvolvido com ReactJS e outras tecnologias.
 
+### <a href="https://my-clients-kohl.vercel.app/">Clique aqui para visitar a versão atual!<a/>
+
 ### _Um pequeno tour pelo site!_
 <img src="/src/img/inicial.gif"/>
 
