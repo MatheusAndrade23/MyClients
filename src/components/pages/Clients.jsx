@@ -30,7 +30,7 @@ function Clients(){
     <div className={styles.container}>
         {clients.length > 0 &&
         clients.map((client) => (
-            <Client nome={client.name} total={client.total} id={client._id} key={client._id}/>
+            <Client nome={client.name} total={client.total} id={client.id} key={client.id}/>
         ))}
         {!removeLoading && <Loading />}
         {removeLoading && clients.length === 0 && (

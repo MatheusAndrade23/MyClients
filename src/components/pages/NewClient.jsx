@@ -5,6 +5,7 @@ import { v4 } from 'uuid'
 import styles from './NewClients.module.css'
 
 import Input from '../forms/Input'
+import SubmitButton from '../forms/SubmitButton'
 
 function NewClient(){
 
@@ -21,7 +22,7 @@ function NewClient(){
 
         if(Client.name){
 
-            Client.total = (!Client.total && 0)
+            if(!Client.total){Client.total = 0}
 
             Client.id = v4()
 
@@ -46,7 +47,7 @@ function NewClient(){
             <p className={styles.paragrafo}>Cadastre o cliente e depois adicione as contas!</p>
             <Input type='text' placeholder='Digite o nome do Cliente' text='Nome:' handleOnChange={handleChange} name="name"/>
             <Input type='text' placeholder='Digite o valor da conta do Cliente' text='Conta:' handleOnChange={handleChange} name="total"/>
-            <button type="submit" className={styles.btn} onClick={handleFinalizarClick}>Finalizar</button>
+            <SubmitButton event={handleFinalizarClick} value="Finalizar"/>
         </form>
     )
 }

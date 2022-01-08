@@ -1,5 +1,9 @@
 {
   "clients": [
-    
+    {
+      "name": "Matheus",
+      "total": "9000",
+      "id": "99d1d439-4cab-4bd2-9309-8809dd15e3ec"
+    }
   ]
 }
