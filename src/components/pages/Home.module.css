@@ -1,10 +1,11 @@
 .container{
 
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 78%;
 }
 
 .container > h1{

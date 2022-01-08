@@ -5,7 +5,6 @@ import NewClient from './components/pages/NewClient';
 import Clients from './components/pages/Clients'
 import PageNotFound from './components/pages/PageNotFound'
 
-import Container from './components/layouts/Container';
 import Footer from './components/layouts/Footer'
 import Header from './components/layouts/Header'
 import Client from './components/pages/Client'
@@ -15,8 +14,6 @@ function App() {
     <Router>
       <Header />
 
-      <Container>
-
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/newclient' element={<NewClient/>}/>
@@ -24,8 +21,6 @@ function App() {
           <Route path='/client/:id' element={<Client/>}/>
           <Route path ='*' element={<PageNotFound/>}/>
         </Routes>
-
-      </Container>
 
       <Footer />
     </Router>

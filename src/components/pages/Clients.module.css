@@ -2,8 +2,8 @@
 
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    min-height: 78%;
 }
 
 .container > span{

@@ -22,21 +22,27 @@ function NewClient(){
 
         if(Client.name){
 
-            if(!Client.total){Client.total = 0}
+            if(Client.name && Client.contato){
 
-            Client.id = v4()
+                Client.total = 0;
+                Client.id = v4();
+                Client.counts = [];
 
-            fetch('http://localhost:5000/clients', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(Client),
-            })
-            .then((resp) => resp.json())
-            .then((data) => {
-                navigate('/clients')
-            })
+                fetch('http://localhost:5000/clients', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Client),
+                })
+                .then((resp) => resp.json())
+                .then((data) => {
+                    navigate('/clients')
+                })
+            }
+            else{
+                // Aparecer um aviso
+            }
         }
     }
 
@@ -46,7 +52,7 @@ function NewClient(){
             <h1>Adicionar Cliente</h1>
             <p className={styles.paragrafo}>Cadastre o cliente e depois adicione as contas!</p>
             <Input type='text' placeholder='Digite o nome do Cliente' text='Nome:' handleOnChange={handleChange} name="name"/>
-            <Input type='text' placeholder='Digite o valor da conta do Cliente' text='Conta:' handleOnChange={handleChange} name="total"/>
+            <Input type='text' placeholder='Digite o contato do Cliente' text='Contato:' handleOnChange={handleChange} name="contato"/>
             <SubmitButton event={handleFinalizarClick} value="Finalizar"/>
         </form>
     )

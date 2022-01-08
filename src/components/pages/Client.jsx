@@ -1,20 +1,20 @@
 import styles from './Client.module.css'
 
-import { useParams, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
-import Input from '../forms/Input'
+import Loading from '../layouts/Loading';
 
 function Client(){
 
     let { id } = useParams()
-    const navigate = useNavigate()
 
-    const [Client, setClient] = useState([])
+    const [Client, setClient] = useState()
+    const [removeLoading, setRemoveLoading] = useState(false)
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/clients`, {
+        fetch (`http://localhost:5000/clients/${id}`, {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
@@ -22,27 +22,29 @@ function Client(){
         })
         .then((resp) => resp.json())
         .then((data) => {
-            
+            setClient(data);
+            setRemoveLoading(true)
         })
     }, [id])
 
-    function handleChange(e) {
-        setClient({ ...Client, [e.target.name]: e.target.value })
-    }
-
-    const handleFinalizarClick = (e) => {
-
-        e.preventDefault()
-    }
-
     return(
 
-        <form className={styles.container}>
-            <h1>Dados do Cliente</h1>
-            <Input type="text" placeholder={Client.name} text="Nome"  handleOnChange={handleChange} name="name"/>
-            <Input type="text" placeholder={Client.total} text="Conta"  handleOnChange={handleChange}  name="total"/>
-            <button type="submit" className={styles.btn} onClick={handleFinalizarClick}>Finalizar</button>
-        </form>
+        <div className={styles.container}>
+            {Client &&
+            <div className={styles.dados}>
+                <h1>Nome: {Client.name}</h1>
+                <h3>Edite as informações, se necessário!</h3>
+                <p>Contato: {Client.contato}</p>
+                <p>Conta Total: <span>{Client.total} R$</span></p>
+            </div>}
+            <div className={styles.adicionar}>
+                <h4>Adicionar Conta:</h4>
+            </div>
+            <div className={styles.contas}>
+                <h4>Contas:</h4>
+            </div>
+            {!removeLoading && <Loading />}
+        </div>
     )
 }
 

@@ -2,14 +2,14 @@ import styles from './ClientCard.module.css'
 
 import LinkButton from './LinkButton'
 
-function Client({nome, total, id}){
+function Client({nome, contato, id}){
 
     return(
         <div className={styles.container}>
             <span className={styles.title}>{nome}</span>
-            <p>Conta: <span>{total} R$</span></p>
+            <p>Contato: <span>{contato}</span></p>
             <div className={styles.buttons}>
-                <LinkButton to={`/client/${id}`} text="Editar"/>
+                <LinkButton to={`/client/${id}`} text="Detalhes"/>
                 <LinkButton to={`/clients`} text="Excluir"/>
             </div>
         </div>

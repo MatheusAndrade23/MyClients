@@ -2,8 +2,10 @@
   "clients": [
     {
       "name": "Matheus",
-      "total": "9000",
-      "id": "99d1d439-4cab-4bd2-9309-8809dd15e3ec"
+      "contato": "35 00000-0000",
+      "total": 0,
+      "id": "7b49daee-9182-40ff-99e3-b96cbed07b75",
+      "counts": []
     }
   ]
 }
