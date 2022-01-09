@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import Loading from '../layouts/Loading';
+import SubmitButton from '../forms/SubmitButton'
 
 function Client(){
 
     let { id } = useParams()
 
     const [Client, setClient] = useState()
+    const [Counts, setCounts] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
 
     useEffect(() => {
@@ -23,7 +25,8 @@ function Client(){
         .then((resp) => resp.json())
         .then((data) => {
             setClient(data);
-            setRemoveLoading(true)
+            setRemoveLoading(true);
+            setCounts(data.counts);
         })
     }, [id])
 
@@ -39,11 +42,15 @@ function Client(){
             </div>}
             <div className={styles.adicionar}>
                 <h4>Adicionar Conta:</h4>
+                <SubmitButton value="Adicionar"/>
             </div>
             <div className={styles.contas}>
-                <h4>Contas:</h4>
+                {Counts.length === 0 && <p>Não há contas cadastradas.</p>}
+                {Counts.length > 0 &&
+                    <h4>Contas:</h4>
+                }
             </div>
-            {!removeLoading && <Loading />}
+            {!removeLoading && <Loading/>}
         </div>
     )
 }

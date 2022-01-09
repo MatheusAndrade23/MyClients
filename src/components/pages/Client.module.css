@@ -21,7 +21,7 @@ h4{
 .dados > h1{
 
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #147593;
     padding: 2px 10px;
     border-radius: 10px;
@@ -31,7 +31,7 @@ h4{
 .dados > h3{
 
     color: #777;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .dados > p{
@@ -43,12 +43,23 @@ h4{
 .adicionar{
 
     border-bottom: 1px solid #147593;
-    margin-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contas{
 
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.contas p{
+
+    color: #147593;
+    font-size: 17px;
+    font-style: italic;
 }
 

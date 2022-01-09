@@ -48,13 +48,15 @@ function NewClient(){
 
     return(
 
-        <form className={styles.form}>
-            <h1>Adicionar Cliente</h1>
-            <p className={styles.paragrafo}>Cadastre o cliente e depois adicione as contas!</p>
-            <Input type='text' placeholder='Digite o nome do Cliente' text='Nome:' handleOnChange={handleChange} name="name"/>
-            <Input type='text' placeholder='Digite o contato do Cliente' text='Contato:' handleOnChange={handleChange} name="contato"/>
-            <SubmitButton event={handleFinalizarClick} value="Finalizar"/>
-        </form>
+        <div className={styles.container}>
+            <form className={styles.form}>
+                <h1>Adicionar Cliente</h1>
+                <p className={styles.paragrafo}>Cadastre o cliente e depois adicione as contas!</p>
+                <Input type='text' placeholder='Digite o nome do Cliente' text='Nome:' handleOnChange={handleChange} name="name"/>
+                <Input type='text' placeholder='Digite o contato do Cliente' text='Contato:' handleOnChange={handleChange} name="contato"/>
+                <SubmitButton event={handleFinalizarClick} value="Finalizar"/>
+            </form>
+        </div>
     )
 }
 
