@@ -49,10 +49,20 @@ h4{
     margin-top: 20px;
     padding-bottom: 20px;
     display: flex;
+    flex-direction: column;
+    
+}
+
+.adicionar > div.adicionarHeader{
+
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    height: 30px;
+}
+
+.adicionar div.formcount{
+
+    flex-direction: column;
 }
 
 .contas{
@@ -76,7 +86,8 @@ h4{
     transition: .5s;
     border-radius: 10px;
     border: 1px solid #147593;
-    font-size: 14px;
+    font-size: 13px;
+    cursor: pointer;
 }
 
 .btn:hover{

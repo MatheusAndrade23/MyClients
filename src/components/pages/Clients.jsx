@@ -41,16 +41,19 @@ function Clients(){
     }
 
     return (
-    <div className={styles.container}>
-        {clients.length > 0 &&
-        clients.map((client) => (
-            <Client nome={client.name} contato={client.contato} id={client.id} key={client.id} excluirEvent={HandleExcluir}/>
-        ))}
-        {!removeLoading && <Loading />}
-        {removeLoading && clients.length === 0 && (
-          <p className={styles.p}>Não há clientes cadastrados!</p>
-        )}
-    </div>
+        <>
+            <h1 className={styles.titulo}>Meus Clientes:</h1>
+            <div className={styles.container}>
+                {clients.length > 0 &&
+                clients.map((client) => (
+                    <Client nome={client.name} contato={client.contato} id={client.id} key={client.id} excluirEvent={HandleExcluir}/>
+                ))}
+                {!removeLoading && <Loading />}
+                {removeLoading && clients.length === 0 && (
+                <p className={styles.p}>Não há clientes cadastrados!</p>
+                )}
+            </div>
+        </>
     )
 }
 

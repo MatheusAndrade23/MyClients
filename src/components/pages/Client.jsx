@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom';
-
 import styles from './Client.module.css'
 
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-import Loading from '../layouts/Loading';
+import Loading from '../layouts/Loading'
 import SubmitButton from '../forms/SubmitButton'
 
 function Client(){
@@ -15,6 +13,8 @@ function Client(){
     const [Client, setClient] = useState()
     const [Counts, setCounts] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
+    const [showClientForm, setShowClientForm] = useState(false)
+    const [showCountsForm, setShowCountsForm] = useState(false)
 
     useEffect(() => {
 
@@ -32,8 +32,12 @@ function Client(){
         })
     }, [id])
 
+    function ShowCounts(){
+        setShowCountsForm(!showCountsForm);
+    }
+
     function AdicionarConta(){
-        
+
     }
 
     return(
@@ -48,12 +52,21 @@ function Client(){
                     <p>Conta Total: <span>{Client.total} R$</span></p>
                 </div>
                 <div>
-                    <Link to="/newclient" className={styles.btn}>Editar</Link>
+                    <button className={styles.btn}>Editar</button>
                 </div>
             </div>}
             <div className={styles.adicionar}>
-                <h4>Adicionar Conta:</h4>
-                <SubmitButton value="Adicionar" event={AdicionarConta}/>
+                <div className={styles.adicionarHeader}>
+                    <h4>Adicionar Conta:</h4>
+                    <SubmitButton value="Adicionar" event={ShowCounts}/>
+                </div>
+                {showCountsForm &&(
+                    <div className={styles.formcount}>
+                        <input type="text" placeholder='__/__/____'/>
+                        <input type="text" placeholder='Digite o Valor'/>
+                        <SubmitButton value='Finalizar' event={AdicionarConta}/>
+                    </div>
+                )}
             </div>
             <div className={styles.contas}>
                 {Counts.length === 0 && <p>Não há contas cadastradas.</p>}
