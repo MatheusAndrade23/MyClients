@@ -10,10 +10,10 @@
 
 #### OBS: Como o backend ainda não foi desenvolvido, a página "Clientes" irá carregar eternamente!
 
-### _Um pequeno tour pelo site!_
+### _Um pequeno tour pelo site 🚀_
 <img src="/src/img/inicial.gif"/>
 
-### _Adicionando e excluindo clientes_
+### _Adicionando e Excluindo clientes 🚀_
 <img src="/src/img/adicionando_excluindo.gif"/>
 
 <h2>Tecnologias Utilizadas:</h2>
@@ -32,6 +32,6 @@
  
  <br></br>
  
-<div align="center">
-  <p>---- Em Desenvolvimento ----</p>
-</div>
+<h4 align="center"> 
+	🚧 Em Desenvolvimento...  🚧
+</h4>
