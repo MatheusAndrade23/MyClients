@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import styles from './Clients.module.css'
 
 import Client from '../layouts/ClientCard'
-import Loading from '../layouts/Loading';
+import Loading from '../layouts/Loading'
 
 function Clients(){
 

@@ -1,3 +1,11 @@
 {
-  "clients": []
+  "clients": [
+    {
+      "name": "Matheus",
+      "contato": "35 00000-0000",
+      "total": 0,
+      "id": "c83b879b-93aa-42d0-861c-2a20d7cf3d8d",
+      "counts": []
+    }
+  ]
 }

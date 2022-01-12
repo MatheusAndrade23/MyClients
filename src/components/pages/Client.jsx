@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import styles from './Client.module.css'
 
 import { useParams } from 'react-router-dom'
@@ -30,19 +32,28 @@ function Client(){
         })
     }, [id])
 
+    function AdicionarConta(){
+        
+    }
+
     return(
 
         <div className={styles.container}>
             {Client &&
             <div className={styles.dados}>
-                <h1>Nome: {Client.name}</h1>
-                <h3>Edite as informações, se necessário!</h3>
-                <p>Contato: {Client.contato}</p>
-                <p>Conta Total: <span>{Client.total} R$</span></p>
+                <div>
+                    <h1>Nome: {Client.name}</h1>
+                    <h3>Edite as informações, se necessário!</h3>
+                    <p>Contato: {Client.contato}</p>
+                    <p>Conta Total: <span>{Client.total} R$</span></p>
+                </div>
+                <div>
+                    <Link to="/newclient" className={styles.btn}>Editar</Link>
+                </div>
             </div>}
             <div className={styles.adicionar}>
                 <h4>Adicionar Conta:</h4>
-                <SubmitButton value="Adicionar"/>
+                <SubmitButton value="Adicionar" event={AdicionarConta}/>
             </div>
             <div className={styles.contas}>
                 {Counts.length === 0 && <p>Não há contas cadastradas.</p>}

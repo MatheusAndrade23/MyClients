@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { v4 } from 'uuid'
 
-import styles from './NewClients.module.css'
+import styles from './NewClient.module.css'
 
 import Input from '../forms/Input'
 import SubmitButton from '../forms/SubmitButton'
