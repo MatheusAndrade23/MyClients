@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 
 import Loading from '../layouts/Loading'
 import SubmitButton from '../forms/SubmitButton'
+import CountForm from '../forms/CountForm'
+import ClientForm from '../forms/ClientForm'
 
 function Client(){
 
@@ -36,8 +38,8 @@ function Client(){
         setShowCountsForm(!showCountsForm);
     }
 
-    function AdicionarConta(){
-
+    function ShowEditar(){
+        setShowClientForm(!showClientForm);
     }
 
     return(
@@ -47,32 +49,28 @@ function Client(){
             <div className={styles.dados}>
                 <div>
                     <h1>Nome: {Client.name}</h1>
-                    <h3>Edite as informações, se necessário!</h3>
-                    <p>Contato: {Client.contato}</p>
-                    <p>Conta Total: <span>{Client.total} R$</span></p>
+                    {!showClientForm && (
+                    <>
+                        <h3>Edite as informações, se necessário!</h3>
+                        <p>Contato: {Client.contato}</p>
+                        <p>Conta Total: <span>{Client.total} R$</span></p> 
+                    </>)}
+                    {showClientForm && (<ClientForm nome={Client.name} contato={Client.contato}/>)}
                 </div>
                 <div>
-                    <button className={styles.btn}>Editar</button>
+                    <button className={styles.btn} onClick={ShowEditar}>{!showClientForm ? "Editar" : "Cancelar"}</button>
                 </div>
             </div>}
             <div className={styles.adicionar}>
                 <div className={styles.adicionarHeader}>
                     <h4>Adicionar Conta:</h4>
-                    <SubmitButton value="Adicionar" event={ShowCounts}/>
+                    <SubmitButton value={!showCountsForm ? "Adicionar" : "Cancelar"} event={ShowCounts}/>
                 </div>
-                {showCountsForm &&(
-                    <div className={styles.formcount}>
-                        <input type="text" placeholder='__/__/____'/>
-                        <input type="text" placeholder='Digite o Valor'/>
-                        <SubmitButton value='Finalizar' event={AdicionarConta}/>
-                    </div>
-                )}
+                {showCountsForm && (<CountForm/>)}
             </div>
             <div className={styles.contas}>
                 {Counts.length === 0 && <p>Não há contas cadastradas.</p>}
-                {Counts.length > 0 &&
-                    <h4>Contas:</h4>
-                }
+                {Counts.length > 0 && (<h4>Contas:</h4>)}
             </div>
             {!removeLoading && <Loading/>}
         </div>

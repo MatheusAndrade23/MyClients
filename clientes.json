@@ -5,7 +5,12 @@
       "contato": "35 00000-0000",
       "total": 0,
       "id": "8cdbb968-8993-4149-ad6f-dbeb28b34145",
-      "counts": []
+      "counts": [
+        {"data": "11/11/111",
+          "valor": 10,
+          "titulo": "Compra X"
+        }
+      ]
     }
   ]
 }
