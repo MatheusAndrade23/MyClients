@@ -42,7 +42,7 @@ function Clients(){
 
     return (
         <>
-            <h1 className={styles.titulo}>Meus Clientes:</h1>
+            <h1 className={styles.titulo}>Clientes:</h1>
             <div className={styles.container}>
                 {clients.length > 0 &&
                 clients.map((client) => (

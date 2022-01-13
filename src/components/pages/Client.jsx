@@ -7,6 +7,7 @@ import Loading from '../layouts/Loading'
 import SubmitButton from '../forms/SubmitButton'
 import CountForm from '../forms/CountForm'
 import ClientForm from '../forms/ClientForm'
+import ContaCard from '../layouts/ContaCard'
 
 function Client(){
 
@@ -47,7 +48,7 @@ function Client(){
         <div className={styles.container}>
             {Client &&
             <div className={styles.dados}>
-                <div>
+                <div className={styles.dados2}>
                     <h1>Nome: {Client.name}</h1>
                     {!showClientForm && (
                     <>
@@ -69,8 +70,13 @@ function Client(){
                 {showCountsForm && (<CountForm/>)}
             </div>
             <div className={styles.contas}>
-                {Counts.length === 0 && <p>Não há contas cadastradas.</p>}
-                {Counts.length > 0 && (<h4>Contas:</h4>)}
+                {Counts.length === 0 ? <p>Não há contas cadastradas.</p> : <h4>Contas:</h4>}
+                <div>
+                    {Counts.length > 0 && (
+                        Counts.map((dados) => ( 
+                            <ContaCard data={dados.data} valor={dados.valor} titulo={dados.titulo}/>
+                    )))}
+                </div>
             </div>
             {!removeLoading && <Loading/>}
         </div>

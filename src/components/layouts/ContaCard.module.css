@@ -1,0 +1,33 @@
+.container{
+
+    display: flex;
+    height: 140px;
+    width: 170px;
+    flex-direction: column;
+    border: 2px solid #147593;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.container h1{
+
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    padding: 5px 10px;
+    background-color: #147593;
+    border-radius: 10px;
+}
+
+.container p{
+
+    color: #444;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.container input{
+
+    margin-top: 10px;
+}

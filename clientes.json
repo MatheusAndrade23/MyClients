@@ -6,9 +6,17 @@
       "total": 0,
       "id": "8cdbb968-8993-4149-ad6f-dbeb28b34145",
       "counts": [
-        {"data": "11/11/111",
-          "valor": 10,
+        {"data": "11/11/1111",
+          "valor": 100,
           "titulo": "Compra X"
+        },
+        {"data": "00/00/0000",
+          "valor": 10,
+          "titulo": "Compra Y"
+        },
+        {"data": "22/22/2222",
+          "valor": 104,
+          "titulo": "Compra Z"
         }
       ]
     }

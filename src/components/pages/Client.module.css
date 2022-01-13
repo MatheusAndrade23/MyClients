@@ -44,6 +44,11 @@ h4{
     color: #444;
 }
 
+.dados2{
+
+    width: 650px;
+}
+
 .adicionar{
 
     border-bottom: 1px solid #147593;
@@ -76,6 +81,13 @@ h4{
     color: #147593;
     font-size: 17px;
     font-style: italic;
+}
+
+.contas > div{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .btn{
