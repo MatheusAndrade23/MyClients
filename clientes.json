@@ -1,11 +1,3 @@
 {
-  "clients": [
-    {
-      "name": "Rafael",
-      "contato": "34 12345-6789",
-      "total": 0,
-      "id": "8cdbb968-8993-4149-ad6f-dbeb28b34145",
-      "contas": []
-    }
-  ]
+  "clients": []
 }
