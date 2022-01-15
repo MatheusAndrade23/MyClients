@@ -2,14 +2,19 @@ import styles from "./ContaCard.module.css"
 
 import SubmitButton from "../forms/SubmitButton"
 
-function ContaCard({data, valor, titulo}){
+function ContaCard({data, valor, titulo, handleRemove, id}){
+
+    const remove = (e) => {
+        e.preventDefault()
+        handleRemove(id, valor)
+    }
 
     return(
         <div className={styles.container}>
             <h1>{titulo}</h1>
             <p>Data: {data}</p>
             <p>Valor: {valor} R$</p>
-            <SubmitButton value="Excluir"/>
+            <SubmitButton value="Excluir" event={remove}/>
         </div>
     )
 }
