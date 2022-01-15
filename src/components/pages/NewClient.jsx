@@ -26,7 +26,7 @@ function NewClient(){
 
                 Client.total = 0;
                 Client.id = v4();
-                Client.counts = [];
+                Client.contas = [];
 
                 fetch('http://localhost:5000/clients', {
                 method: 'POST',
