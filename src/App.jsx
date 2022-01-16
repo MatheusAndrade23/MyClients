@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <Header />
-
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/newclient' element={<NewClient/>}/>
@@ -21,7 +20,6 @@ function App() {
           <Route path='/client/:id' element={<Client/>}/>
           <Route path ='*' element={<PageNotFound/>}/>
         </Routes>
-
       <Footer />
     </Router>
   )

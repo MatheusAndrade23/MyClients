@@ -1,4 +1,4 @@
-# MyClients
+<h1 align="center" >MyClients</h1>
 
 <div align="center">
   <img src="/src/img/logo.jpeg"/>
@@ -10,11 +10,22 @@
 
 #### OBS: Como o backend ainda não foi desenvolvido, a página "Clientes" irá carregar eternamente!
 
+
+---
+
+
 ### _Um pequeno tour pelo site 🚀_
 <img src="/src/img/inicial.gif"/>
 
-### _Adicionando e Excluindo clientes 🚀_
-<img src="/src/img/adicionando_excluindo.gif"/>
+### _Adicionando e Excluindo clientes e contas 🚀_
+<img src="/src/img/manipulando.gif"/>
+
+### _Editando Informações de clientes 🚀_
+<img src="/src/img/editando.gif"/>
+
+
+---
+
 
 <h2>Tecnologias Utilizadas:</h2>
  
@@ -31,7 +42,11 @@
  </div>
  
  <br></br>
- 
+
+
+ ---
+
+
 <h4 align="center"> 
-	🚧 Em Desenvolvimento...  🚧
+	🚧 Em Construção...  🚧
 </h4>
