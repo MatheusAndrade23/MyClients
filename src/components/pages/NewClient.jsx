@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { v4 } from 'uuid'
 
 import styles from './NewClient.module.css'
 
@@ -25,7 +24,6 @@ function NewClient(){
             if(Client.name && Client.contato){
 
                 Client.total = 0;
-                Client.id = v4();
                 Client.contas = [];
 
                 fetch('http://localhost:5000/clients', {
@@ -37,7 +35,7 @@ function NewClient(){
                 })
                 .then((resp) => resp.json())
                 .then((data) => {
-                    navigate('/clients')
+                    navigate('/clients');
                 })
             }
             else{

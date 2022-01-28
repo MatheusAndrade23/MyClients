@@ -46,7 +46,7 @@ function Clients(){
             <div className={styles.container}>
                 {clients.length > 0 &&
                 clients.map((client) => (
-                    <Client nome={client.name} contato={client.contato} id={client.id} key={client.id} total={client.total} excluirEvent={HandleExcluir}/>
+                    <Client nome={client.name} contato={client.contato} id={client._id} key={client._id} total={client.total} excluirEvent={HandleExcluir}/>
                 ))}
                 {!removeLoading && <Loading />}
                 {removeLoading && clients.length === 0 && (
