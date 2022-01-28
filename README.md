@@ -14,13 +14,13 @@
 ---
 
 
-### _Um pequeno tour pelo site 🚀_
+### _Um pequeno tour pelo site! 🚀_
 <img src="/src/img/inicial.gif"/>
 
-### _Adicionando e Excluindo clientes e contas 🚀_
+### _Adicionando e Excluindo clientes e contas! 🚀_
 <img src="/src/img/manipulando.gif"/>
 
-### _Editando Informações de clientes 🚀_
+### _Editando Informações de clientes! 🚀_
 <img src="/src/img/editando.gif"/>
 
 
