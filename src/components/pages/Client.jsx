@@ -22,7 +22,7 @@ function Client(){
 
     useEffect(() => {
 
-        fetch (`http://localhost:5000/clients/${id}`, {
+        fetch (`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${id}`, {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function Client(){
         clientUpdated.contas = contasUpdated
         clientUpdated.total = parseFloat(clientUpdated.total) - parseFloat(valor)
 
-        fetch(`http://localhost:5000/clients/${clientUpdated._id}`, {
+        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${clientUpdated._id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ function Client(){
         const clientUpdated = Client
         clientUpdated.total = parseFloat(clientUpdated.total) + parseFloat(lastConta.valor)
     
-        fetch(`http://localhost:5000/clients/${Client._id}`, {
+        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function Client(){
 
     function editClient(client) {
 
-        fetch(`http://localhost:5000/clients/${Client._id}`, {
+        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',

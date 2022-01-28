@@ -26,7 +26,7 @@ function NewClient(){
                 Client.total = 0;
                 Client.contas = [];
 
-                fetch('http://localhost:5000/clients', {
+                fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
