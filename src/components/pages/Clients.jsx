@@ -12,7 +12,7 @@ function Clients(){
 
     useEffect(() => {
 
-        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}`, {
+        fetch(`https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}`, {
 
             method: 'GET',
             headers: {
@@ -28,7 +28,7 @@ function Clients(){
 
     function HandleExcluir(_id){
 
-        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${_id}`, {
+        fetch(`https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${_id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

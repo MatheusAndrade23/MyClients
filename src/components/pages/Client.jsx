@@ -22,7 +22,7 @@ function Client(){
 
     useEffect(() => {
 
-        fetch (`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${id}`, {
+        fetch (`https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${id}`, {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
@@ -46,14 +46,14 @@ function Client(){
 
     function removeConta(_id, valor) {
 
-        const contasUpdated = Client.contas.filter((conta) => conta._id !== _id)
+        const contasUpdated = Client.contas.filter((conta) => conta.id !== _id)
 
         const clientUpdated = Client
 
         clientUpdated.contas = contasUpdated
         clientUpdated.total = parseFloat(clientUpdated.total) - parseFloat(valor)
 
-        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${clientUpdated._id}`, {
+        fetch(`https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${clientUpdated._id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -65,6 +65,8 @@ function Client(){
 
             setClient(clientUpdated)
             setContas(contasUpdated)
+
+            console.log(clientUpdated.contas);
         })
     }
 
@@ -77,7 +79,7 @@ function Client(){
         const clientUpdated = Client
         clientUpdated.total = parseFloat(clientUpdated.total) + parseFloat(lastConta.valor)
     
-        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`, {
+        fetch(`https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -93,7 +95,7 @@ function Client(){
 
     function editClient(client) {
 
-        fetch(`https://myclients-backend-matheusandrade23.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`, {
+        fetch(`https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
