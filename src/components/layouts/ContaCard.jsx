@@ -2,11 +2,11 @@ import styles from "./ContaCard.module.css"
 
 import SubmitButton from "../forms/SubmitButton"
 
-function ContaCard({data, valor, titulo, handleRemove, id}){
+function ContaCard({data, valor, titulo, handleRemove, _id}){
 
     const remove = (e) => {
         e.preventDefault()
-        handleRemove(id, valor)
+        handleRemove(_id, valor)
     }
 
     return(

@@ -44,16 +44,16 @@ function Client(){
         setShowClientForm(!showClientForm);
     }
 
-    function removeConta(id, valor) {
+    function removeConta(_id, valor) {
 
-        const contasUpdated = Client.contas.filter((conta) => conta.id !== id)
+        const contasUpdated = Client.contas.filter((conta) => conta._id !== _id)
 
         const clientUpdated = Client
 
         clientUpdated.contas = contasUpdated
         clientUpdated.total = parseFloat(clientUpdated.total) - parseFloat(valor)
 
-        fetch(`http://localhost:5000/clients/${clientUpdated.id}`, {
+        fetch(`http://localhost:5000/clients/${clientUpdated._id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -72,12 +72,12 @@ function Client(){
 
         const lastConta = Client.contas[Client.contas.length - 1]
     
-        lastConta.id = v4()
+        lastConta._id = v4()
 
         const clientUpdated = Client
         clientUpdated.total = parseFloat(clientUpdated.total) + parseFloat(lastConta.valor)
     
-        fetch(`http://localhost:5000/clients/${Client.id}`, {
+        fetch(`http://localhost:5000/clients/${Client._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function Client(){
 
     function editClient(client) {
 
-        fetch(`http://localhost:5000/clients/${Client.id}`, {
+        fetch(`http://localhost:5000/clients/${Client._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -144,8 +144,8 @@ function Client(){
                             data={dados.data} 
                             valor={dados.valor} 
                             titulo={dados.titulo}
-                            key={dados.id} 
-                            id={dados.id} 
+                            key={dados._id} 
+                            id={dados._id} 
                             handleRemove={removeConta}/>
                         ))
                     )}

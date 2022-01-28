@@ -2,11 +2,11 @@ import styles from './ClientCard.module.css'
 
 import LinkButton from './LinkButton'
 
-function Client({total, nome, contato, id, excluirEvent}){
+function Client({total, nome, contato, _id, excluirEvent}){
 
     const remove = (e) => {
         e.preventDefault()
-        excluirEvent(id)
+        excluirEvent(_id)
     }
 
     return(
@@ -15,7 +15,7 @@ function Client({total, nome, contato, id, excluirEvent}){
             <p>Contato: <span>{contato}</span></p>
             <p>Total: <span>{total}</span> R$</p>
             <div className={styles.buttons}>
-                <LinkButton to={`/client/${id}`} text="Detalhes"/>
+                <LinkButton to={`/client/${_id}`} text="Detalhes"/>
                 <button className={styles.btn} onClick={remove}>Excluir</button>
             </div>
         </div>

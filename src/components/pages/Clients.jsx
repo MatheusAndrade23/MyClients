@@ -26,9 +26,9 @@ function Clients(){
         })
     }, [])
 
-    function HandleExcluir(id){
+    function HandleExcluir(_id){
 
-        fetch(`http://localhost:5000/clients/${id}`, {
+        fetch(`http://localhost:5000/clients/${_id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ function Clients(){
         })
         .then((resp) => resp.json())
         .then((data) => {
-            setClients(clients.filter((client) => client.id !== id))
+            setClients(clients.filter((client) => client._id !== _id))
         })
     }
 
@@ -46,7 +46,7 @@ function Clients(){
             <div className={styles.container}>
                 {clients.length > 0 &&
                 clients.map((client) => (
-                    <Client nome={client.name} contato={client.contato} id={client._id} key={client._id} total={client.total} excluirEvent={HandleExcluir}/>
+                    <Client nome={client.name} contato={client.contato} _id={client._id} key={client._id} total={client.total} excluirEvent={HandleExcluir}/>
                 ))}
                 {!removeLoading && <Loading />}
                 {removeLoading && clients.length === 0 && (
