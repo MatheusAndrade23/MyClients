@@ -63,5 +63,5 @@
 
 
 <h4 align="center"> 
-	🚧 Em breve: MyClients 2.0... 🚧
+	🚧 Em breve: MyClients 2.0 🚧
 </h4>
