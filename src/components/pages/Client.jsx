@@ -46,7 +46,7 @@ function Client(){
 
     function removeConta(_id, valor) {
 
-        const contasUpdated = Client.contas.filter((conta) => conta.id !== _id)
+        const contasUpdated = Client.contas.filter((conta) => conta._id !== _id)
 
         const clientUpdated = Client
 
@@ -66,7 +66,6 @@ function Client(){
             setClient(clientUpdated)
             setContas(contasUpdated)
 
-            console.log(clientUpdated.contas);
         })
     }
 
@@ -147,7 +146,7 @@ function Client(){
                             valor={dados.valor} 
                             titulo={dados.titulo}
                             key={dados._id} 
-                            id={dados._id} 
+                            _id={dados._id} 
                             handleRemove={removeConta}/>
                         ))
                     )}
