@@ -37,4 +37,26 @@
     font-family: 'Shizuru', cursive;
     margin-top: 25px;
     cursor: default;
+    color: #222;
+}
+
+/* Responsivo */
+
+@media (max-width: 415px){
+
+    .container > h1{
+
+        font-size: 25px;
+    }
+
+    .container > span{
+
+        font-size: 15px;
+    }
+
+    .logo{
+
+        font-size: 130px;
+    }
+
 }

@@ -22,7 +22,7 @@ h4{
     justify-content: space-between;
 }
 
-.dados  h1{
+.dados h1{
 
     color: white;
     margin-bottom: 20px;
@@ -38,7 +38,7 @@ h4{
     margin-bottom: 20px;
 }
 
-.dados  p{
+.dados p{
 
     font-size: 20px;
     color: #444;
@@ -110,3 +110,31 @@ h4{
     background-color: #147593;
 }
 
+@media (max-width: 450px){
+
+    .dados{
+
+        flex-direction: column;
+    }
+
+    .dados2{
+
+        width: 100%;
+    }
+
+    .btn{
+
+        margin-top: 20px;
+    }
+
+    .adicionar > div.adicionarHeader{
+
+        display: block;
+        margin-bottom: -10px;
+    }
+
+    .adicionar > div.adicionarHeader > h4{
+    
+        margin-bottom: 20px;
+    }
+}

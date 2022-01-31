@@ -10,9 +10,9 @@ function Home(){
             <h1>Bem-Vindo ao <span>MyClients</span></h1>
             <span>Gerencie a dívida de seus clientes agora mesmo!</span>
             <LinkButton to="/newclient" text="Adicionar Cliente"/>
-            <h1 className={styles.logo}>MyC</h1>
+            <h2 className={styles.logo}>MyC</h2>
         </div> 
-    )
+    );
 }
 
 export default Home

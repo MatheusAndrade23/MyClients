@@ -30,3 +30,23 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 520px){
+
+    .form{
+
+        margin: 10px;
+    }
+    .paragrafo{
+
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 370px){
+
+    .form h1{
+
+        font-size: 27px;
+    }
+}
