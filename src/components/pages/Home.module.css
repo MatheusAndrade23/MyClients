@@ -51,12 +51,12 @@
 
     .container > span{
 
-        font-size: 15px;
+        font-size: 18px;
+        width: 90%;
     }
 
     .logo{
 
         font-size: 130px;
     }
-
 }

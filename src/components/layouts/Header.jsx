@@ -12,9 +12,8 @@ function Header(){
                 <Link to="/" className={styles.item}>Home</Link>
                 <Link to="/clients" className={styles.item}>Clientes</Link>
             </nav>
-        </header>
-        
+        </header>  
     )
-}
+};
 
 export default Header;

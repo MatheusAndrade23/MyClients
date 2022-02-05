@@ -58,4 +58,4 @@ function NewClient(){
     )
 }
 
-export default NewClient
+export default NewClient;

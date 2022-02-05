@@ -6,20 +6,23 @@
     align-items: center;
     width: 100%;
     background-color: #147593;
-    height: 120px;
+    height: 80px;
+    margin-top: 30px;
 }
 
 .ul{
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
     width: 100px;
+    height: 100%;
 }
 
 .item{
 
-    font-size: 35px;
+    font-size: 38px;
     color: white;
     transition: .5s;
 }
@@ -27,11 +30,4 @@
 .item:hover{
 
     color: #c1c1c1;
-}
-
-p{
-    font-weight: lighter;
-    font-size: 22px;
-    color: white;
-    margin-left: 15px;
 }
