@@ -28,3 +28,21 @@
     color: #222;
     cursor: default;
 }
+
+@media (max-width: 340px){
+
+    .container > .logo{
+
+        font-size: 130px;
+    }
+
+    .container > h1{
+
+        font-size: 50px;
+    }
+
+    .container > p{
+
+        font-size: 23px;
+    }
+}
