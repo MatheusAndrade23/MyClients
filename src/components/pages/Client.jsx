@@ -76,8 +76,9 @@ function Client() {
     lastConta._id = v4();
 
     const clientUpdated = Client;
-    clientUpdated.total =
-      parseFloat(clientUpdated.total) + parseFloat(lastConta.valor);
+    clientUpdated.total = parseFloat(clientUpdated.total) + parseFloat(lastConta.valor);
+
+    console.log(clientUpdated);
 
     fetch(
       `https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`,
@@ -97,6 +98,8 @@ function Client() {
   }
 
   function editClient(client) {
+
+    console.log(client)
     fetch(
       `https://myclients-backend.vercel.app/${process.env.REACT_APP_LINK}/${Client._id}`,
       {
@@ -110,6 +113,7 @@ function Client() {
       .then((resp) => resp.json())
       .then((data) => {
           
+        data.contas = Client.contas;
         data.total = Client.total;
 
         setClient(data);
